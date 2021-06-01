@@ -310,6 +310,7 @@ function isHypercoreKey (key) {
   if (typeof key === 'string') return /^[0-9A-Fa-f]{64}$/.test(key)
   else if (Buffer.isBuffer(key)) return key.length === 32
 }
+module.exports.isHypercoreKey = isHypercoreKey
 
 // Ensures 'key' is a hex string
 function sanitizeKey (key) {
